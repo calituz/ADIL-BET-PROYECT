@@ -8,14 +8,14 @@ import { Provider } from 'react-redux';
 import store from './redux/store/index.js';
 import { Auth0Provider } from "@auth0/auth0-react";
 
-/* axios.defaults.baseURL = 'https://adil-bet-production.up.railway.app/'; */
-axios.defaults.baseURL = 'http://localhost:3001/';
+axios.defaults.baseURL = 'https://pf-main-production.up.railway.app/';
+/* axios.defaults.baseURL = 'http://localhost:3001/'; */
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Auth0Provider
-  domain="dev-588r82613qdycpnk.us.auth0.com"
-  clientId="V8rFUHtIEr5dOClFvs3MTz4zBCg3ZgwV"
+  domain="dev-ihao33fcgv01dz1n.us.auth0.com"
+  clientId="N7If0oEPTTr6GlCUzpZsI7dYzie5QDG6"
   redirectUri={window.location.origin}
   >
   <Provider store={store}>
