@@ -23,8 +23,8 @@ const teamMembers = [
   },
   {
     name: "Maximiliano García",
-    image: require("../../Assets/Images/avatar-perfil-png.png"),
-    lema: "",
+    image: require("../../Assets/Images/Imagen-maxi.jpeg"),
+    lema: "Medir el progreso del desarrollo de software por líneas de código es como medir el progreso de la construcción de un avión por su peso - Bill Gates",
     ocupation: "Desarrollador Web FullStack",
     linkedin: "https://www.linkedin.com/in/maxi-garcia-fsd/",
     github: "https://github.com/maxi326519",
@@ -39,8 +39,8 @@ const teamMembers = [
   },
   {
     name: "Carlos Ciliberti",
-    image: require("../../Assets/Images/avatar-perfil-png.png"),
-    lema: "",
+    image: require("../../Assets/Images/Imagen-carlos.jpeg"),
+    lema: "Sin dolor no hay ganancia.",
     ocupation: "Desarrollador Web FullStack",
     linkedin: "https://www.linkedin.com/in/",
     github: "https://github.com/calituz",
@@ -64,7 +64,8 @@ const teamMembers = [
   },
   {
     name: "Juan Gómez",
-    image: require("../../Assets/Images/avatar-perfil-png.png"),
+    image: require("../../Assets/Images/Imagen-juan.jpeg"),
+    lema: "Programar es como vivir, no lo estás haciendo realmente si no aprendes algo nuevo cada día.",
     ocupation: "Desarrollador Web FullStack",
     linkedin:
       "https://www.linkedin.com/in/juan-carlos-g%C3%B3mez-cucaita-4677a218b/",

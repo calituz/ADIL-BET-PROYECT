@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
+import React, { useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import {
   Elements
@@ -15,7 +14,6 @@ const stripePromise = loadStripe(
 );
 
 export default function Stripe() {
-
   const [loading, setLoading] = useState(false);
 
   return (

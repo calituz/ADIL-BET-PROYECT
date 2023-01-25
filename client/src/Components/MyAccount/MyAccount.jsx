@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 // Components
 import Nav from "../Nav/Nav";
@@ -9,6 +10,7 @@ import UserProfile from "./userProfile/userProfile";
 import styles from "./MyAccount.module.css";
 
 export default function MyAccount() {
+  const userLogin = useSelector((state) => state.userLogin);
   const [sections, setSection] = useState({
     profile: true,
     activity: false,
