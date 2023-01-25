@@ -27,6 +27,8 @@ import DepositsDashboard from "../Components/Dashboard/DepositsDashboard/Deposit
 import ReviewsDashboard from "../Components/Dashboard/ReviewsDashboard/ReviewsDashboard.jsx";
 import WithdrawDashboard from "../Components/Dashboard/WithdrawDashboard/WithdrawDashboard.jsx"
 
+import { ToastContainer, toast } from "react-toastify";
+
 import "./App.css";
 import { useAuth0 } from "@auth0/auth0-react";
 
@@ -34,7 +36,6 @@ function App() {
   const error = useSelector((state) => state.error);
   const dispatch = useDispatch()
   const { user } = useAuth0();
-
 
   useEffect(() => {
     const dataUser = JSON.parse(window.localStorage.getItem('user'));
@@ -44,9 +45,15 @@ function App() {
     dispatch(postLoginUserAuth0({ email: dataUser.email, name: dataUser.name}))
   }, [user]);
 
+  useEffect(()=>{
+    console.log(error);
+    toast(error);
+  },[error]);
+
   return (
     <div className="App">
       <BrowserRouter>
+        <ToastContainer />
         <Routes>
           {/* CLIENT PAGE */}
           <Route path="/" element={<Landing />} />
@@ -58,7 +65,6 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/admin" element={<Inprocess />} />
-          <Route path="/cart" element={<Cart />} />
           <Route path="/myaccount" element={<MyAccount />} />
           <Route path="/payment" element={<Stripe />} />
 
@@ -73,7 +79,7 @@ function App() {
           <Route path="/dashboard/retiros" element={ <WithdrawDashboard/> }/>
         </Routes>
       </BrowserRouter>
-      {error.length === 0
+{/*       {error.length === 0
         ? null
         : Swal.fire({
             title: "Error!",
@@ -82,7 +88,7 @@ function App() {
             confirmButtonText: "OK",
           }).then(function () {
             window.location = "/home";
-          })}
+          })} */}
     </div>
   );
 }
