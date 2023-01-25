@@ -40,12 +40,12 @@ const Login = () => {
         <img src={Logo} alt="Logo-adilbet" className="Logo-login" />
       </div>
       <div className="container-form-all">
+        <div className="container-form">
         <Link to="/home">
           <button className="btn-X">
             <span>X</span>
           </button>
         </Link>
-        <div className="container-form">
           <h3 className="title-login">Inicia Sesion</h3>
           <form onSubmit={handleSubmit} className="form-body">
 
@@ -91,7 +91,7 @@ const Login = () => {
             </button>
             <div className="register-link">
               <p className="text-form-register">¿No tienes cuenta?</p>
-              <Link to="/signin" className="btn btn-outline-primary">Registarse</Link>
+              <Link to="/signin" className="btn btn-outline-primary">Registrarse</Link>
           </div>
         </div>
       </div>
