@@ -57,3 +57,17 @@
   cursor: pointer;
   filter: brightness(90%);
 }
+
+.btn-X {
+  background-color: rgb(209, 209, 209);
+  border: 0;
+  box-shadow: 0 2px 2px grey; 
+  border-radius: 25px;
+  transition: all 500ms ease;
+}
+
+.btn-X:hover {
+  transform: scale(1.50);
+  box-shadow: 0 4px 4px grey; 
+ 
+}
